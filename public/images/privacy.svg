@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Privacy Policy — How We Handle Your Information">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1D372D"/>
+      <stop offset="0.55" stop-color="#2B5443"/>
+      <stop offset="1" stop-color="#0E1F18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1060" cy="70" r="220" fill="#E8B542" opacity="0.07"/>
+  <circle cx="90" cy="580" r="180" fill="#4A7C3F" opacity="0.12"/>
+  <g transform="translate(830,130)" opacity="0.92">
+      <rect x="20" y="100" width="180" height="150" rx="16" fill="#4B5057"/>
+      <path d="M60 100 V66 C60 34 86 10 110 10 C134 10 160 34 160 66 V100" stroke="#4B5057" stroke-width="18" fill="none"/>
+      <circle cx="110" cy="160" r="22" fill="#E8B542"/>
+      <rect x="102" y="170" width="16" height="36" rx="8" fill="#E8B542"/>
+    </g>
+  <text x="80" y="200" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#ffffff">
+    <tspan x="80" dy="0em">Privacy</tspan><tspan x="80" dy="1.15em">Policy</tspan>
+  </text>
+  <text x="80" y="340" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#E8B542">How We Handle Your Information</text>
+  <text x="80" y="560" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#CFE0D6">SibExport · sibexport.ir</text>
+  <rect x="80" y="470" width="56" height="6" rx="3" fill="#E8B542"/>
+</svg>

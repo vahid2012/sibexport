@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="From Iranian Orchards to Global Markets — Premium Iranian Apples">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1D372D"/>
+      <stop offset="0.55" stop-color="#2B5443"/>
+      <stop offset="1" stop-color="#0E1F18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1060" cy="70" r="220" fill="#E8B542" opacity="0.07"/>
+  <circle cx="90" cy="580" r="180" fill="#4A7C3F" opacity="0.12"/>
+  <g transform="translate(760,110)" opacity="0.9">
+      <circle cx="150" cy="120" r="86" fill="#E8B542" opacity="0.28"/>
+      <ellipse cx="90" cy="220" rx="64" ry="60" fill="#C0392B"/>
+      <ellipse cx="216" cy="220" rx="64" ry="60" fill="#D4A017"/>
+      <path d="M90 164 C88 140 100 124 122 118" stroke="#6B4F2A" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <path d="M216 164 C214 140 226 124 248 118" stroke="#6B4F2A" stroke-width="8" fill="none" stroke-linecap="round"/>
+    </g>
+  <text x="80" y="200" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#ffffff">
+    <tspan x="80" dy="0em">From Iranian</tspan><tspan x="80" dy="1.15em">Orchards to</tspan><tspan x="80" dy="1.15em">Global Markets</tspan>
+  </text>
+  <text x="80" y="404" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#E8B542">Premium Iranian Apples</text>
+  <text x="80" y="560" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#CFE0D6">SibExport · sibexport.ir</text>
+  <rect x="80" y="470" width="56" height="6" rx="3" fill="#E8B542"/>
+</svg>

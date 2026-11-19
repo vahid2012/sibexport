@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-label="Export documentation coordination">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24463A"/>
+      <stop offset="1" stop-color="#0E1F18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" fill="url(#g)"/>
+  <circle cx="1080" cy="60" r="180" fill="#E8B542" opacity="0.08"/>
+  <circle cx="60" cy="440" r="140" fill="#4A7C3F" opacity="0.12"/>
+  <g transform="scale(0.72) translate(880,60)"><g transform="translate(070,120)" opacity="0.92" fill="none">
+      <circle cx="40" cy="200" r="26" fill="#E8B542"/>
+      <circle cx="220" cy="40" r="26" fill="#ffffff" opacity="0.9"/>
+      <path d="M40 200 C110 200 90 40 220 40" stroke="#E8B542" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26"/>
+      <circle cx="130" cy="118" r="14" fill="#E8B542" opacity="0.7"/>
+    </g></g>
+  <text x="70" y="250" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="bold" fill="#ffffff">Export documentation coordination</text>
+  <text x="70" y="300" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#CFE0D6">SibExport · sibexport.ir</text>
+  <rect x="70" y="330" width="48" height="5" rx="2.5" fill="#E8B542"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-label="Export cartons protect fruit in transit">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24463A"/>
+      <stop offset="1" stop-color="#0E1F18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" fill="url(#g)"/>
+  <circle cx="1080" cy="60" r="180" fill="#E8B542" opacity="0.08"/>
+  <circle cx="60" cy="440" r="140" fill="#4A7C3F" opacity="0.12"/>
+  <g transform="scale(0.72) translate(880,60)"><g transform="translate(000,130)" opacity="0.92">
+      <rect x="0" y="60" width="220" height="180" rx="10" fill="#B98A4E"/>
+      <rect x="0" y="60" width="220" height="42" rx="10" fill="#A3743D"/>
+      <rect x="86" y="102" width="48" height="80" rx="6" fill="#F3E4C8" opacity="0.85"/>
+      <path d="M0 102 L-52 132 M220 102 L272 132" stroke="#A3743D" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="110" cy="24" rx="64" ry="26" fill="#E8B542" opacity="0.35"/>
+      <ellipse cx="42" cy="120" rx="14" ry="18" fill="#ffffff" opacity="0.2"/>
+    </g></g>
+  <text x="70" y="250" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="bold" fill="#ffffff">Export cartons protect fruit in transit</text>
+  <text x="70" y="300" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#CFE0D6">SibExport · sibexport.ir</text>
+  <rect x="70" y="330" width="48" height="5" rx="2.5" fill="#E8B542"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-label="Apple orchards of West Azerbaijan">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24463A"/>
+      <stop offset="1" stop-color="#0E1F18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" fill="url(#g)"/>
+  <circle cx="1080" cy="60" r="180" fill="#E8B542" opacity="0.08"/>
+  <circle cx="60" cy="440" r="140" fill="#4A7C3F" opacity="0.12"/>
+  <g transform="scale(0.72) translate(880,60)"><g transform="translate(060,110)" opacity="0.9">
+      <circle cx="150" cy="120" r="86" fill="#E8B542" opacity="0.28"/>
+      <ellipse cx="90" cy="220" rx="64" ry="60" fill="#C0392B"/>
+      <ellipse cx="216" cy="220" rx="64" ry="60" fill="#D4A017"/>
+      <path d="M90 164 C88 140 100 124 122 118" stroke="#6B4F2A" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <path d="M216 164 C214 140 226 124 248 118" stroke="#6B4F2A" stroke-width="8" fill="none" stroke-linecap="round"/>
+    </g></g>
+  <text x="70" y="250" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="bold" fill="#ffffff">Apple orchards of West Azerbaijan</text>
+  <text x="70" y="300" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#CFE0D6">SibExport · sibexport.ir</text>
+  <rect x="70" y="330" width="48" height="5" rx="2.5" fill="#E8B542"/>
+</svg>

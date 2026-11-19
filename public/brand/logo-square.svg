@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SibExport">
+  <rect width="512" height="512" rx="96" fill="#1D372D"/>
+  <g transform="translate(116,120)">
+    <path d="M140 78 C114 44, 62 36, 36 66 C6 101, 10 166, 32 214 C54 261, 92 296, 122 291 C131 289, 139 285, 140 285 C141 285, 149 289, 158 291 C188 296, 226 261, 248 214 C270 166, 274 101, 244 66 C218 36, 166 44, 140 78 Z" fill="#468268"/>
+    <path d="M140 78 C114 44, 62 36, 36 66 C6 101, 10 166, 32 214 C54 261, 92 296, 122 291 C131 289, 139 285, 140 285 L140 78 Z" fill="#679F84"/>
+    <path d="M140 70 C144 34, 170 12, 205 8 C205 44, 179 68, 140 70 Z" fill="#97BFAB"/>
+    <path d="M140 78 C138 56, 142 38, 150 20" stroke="#F4E5B8" stroke-width="12" stroke-linecap="round"/>
+    <path d="M58 106 C45 132, 47 171, 63 200" stroke="#E3B655" stroke-width="11" stroke-linecap="round" opacity="0.95"/>
+  </g>
+</svg>

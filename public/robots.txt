@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Explicitly do not block assets
+Allow: /_astro/
+Allow: /brand/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.ico$
+
+Sitemap: https://sibexport.ir/sitemap-index.xml

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-label="Your inquiry prepared for WhatsApp">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24463A"/>
+      <stop offset="1" stop-color="#0E1F18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" fill="url(#g)"/>
+  <circle cx="1080" cy="60" r="180" fill="#E8B542" opacity="0.08"/>
+  <circle cx="60" cy="440" r="140" fill="#4A7C3F" opacity="0.12"/>
+  <g transform="scale(0.72) translate(880,60)"><g transform="translate(010,130)" opacity="0.92">
+      <path d="M0 40 C0 18 18 0 40 0 H180 C202 0 220 18 220 40 V130 C220 152 202 170 180 170 H80 L20 220 V170 C8 166 0 152 0 134 Z" fill="#25d366"/>
+      <path d="M56 62 C56 110 96 148 144 148 L162 122 L128 100 L112 114 C92 104 78 88 72 68 L88 78 L108 46 Z" fill="#ffffff"/>
+      <circle cx="230" cy="190" r="40" fill="#E8B542"/>
+      <path d="M214 190 L226 202 L248 176" stroke="#1D372D" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g></g>
+  <text x="70" y="250" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="bold" fill="#ffffff">Your inquiry prepared for WhatsApp</text>
+  <text x="70" y="300" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#CFE0D6">SibExport · sibexport.ir</text>
+  <rect x="70" y="330" width="48" height="5" rx="2.5" fill="#E8B542"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg width="360" height="96" viewBox="0 0 360 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SibExport">
+  <!-- Apple mark -->
+  <g transform="translate(16,16)">
+    <!-- Apple body: two overlapping lobes -->
+    <path d="M32 18 C26 10, 14 8, 8 15 C1 23, 2 38, 7 49 C12 60, 21 68, 28 67 C30 66.6, 32 65.6, 32 65.6 C32 65.6, 34 66.6, 36 67 C43 68, 52 60, 57 49 C62 38, 63 23, 56 15 C50 8, 38 10, 32 18 Z" fill="#2B5443"/>
+    <!-- Left lobe highlight -->
+    <path d="M32 18 C26 10, 14 8, 8 15 C1 23, 2 38, 7 49 C12 60, 21 68, 28 67 C30 66.6, 32 65.6, 32 65.6 L32 18 Z" fill="#346852"/>
+    <!-- Leaf -->
+    <path d="M32 16 C33 8, 39 3, 47 2 C47 10, 41 16, 32 16 Z" fill="#679F84"/>
+    <!-- Stem -->
+    <path d="M32 18 C31.6 13, 32.4 9, 34 5" stroke="#834F25" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- Subtle gold highlight arc -->
+    <path d="M13 24 C10 30, 10.5 39, 14 46" stroke="#E3B655" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="104" y="50" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.5" fill="#26282B">Sib</text>
+  <text x="150" y="50" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.5" fill="#2B5443">Export</text>
+  <text x="104" y="70" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="500" letter-spacing="3" fill="#4B5057">IRANIAN APPLE EXPORT</text>
+</svg>

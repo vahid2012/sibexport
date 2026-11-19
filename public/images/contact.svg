@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Contact SibExport — WhatsApp · Phone · Email">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1D372D"/>
+      <stop offset="0.55" stop-color="#2B5443"/>
+      <stop offset="1" stop-color="#0E1F18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1060" cy="70" r="220" fill="#E8B542" opacity="0.07"/>
+  <circle cx="90" cy="580" r="180" fill="#4A7C3F" opacity="0.12"/>
+  <g transform="translate(810,130)" opacity="0.92">
+      <path d="M0 40 C0 18 18 0 40 0 H180 C202 0 220 18 220 40 V130 C220 152 202 170 180 170 H80 L20 220 V170 C8 166 0 152 0 134 Z" fill="#25d366"/>
+      <path d="M56 62 C56 110 96 148 144 148 L162 122 L128 100 L112 114 C92 104 78 88 72 68 L88 78 L108 46 Z" fill="#ffffff"/>
+      <circle cx="230" cy="190" r="40" fill="#2B5443"/>
+      <path d="M214 190 L226 202 L248 176" stroke="#1D372D" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  <text x="80" y="200" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#ffffff">
+    <tspan x="80" dy="0em">Contact</tspan><tspan x="80" dy="1.15em">SibExport</tspan>
+  </text>
+  <text x="80" y="340" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#E8B542">WhatsApp · Phone · Email</text>
+  <text x="80" y="560" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#CFE0D6">SibExport · sibexport.ir</text>
+  <rect x="80" y="470" width="56" height="6" rx="3" fill="#E8B542"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-label="Three inspection points in every order">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24463A"/>
+      <stop offset="1" stop-color="#0E1F18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" fill="url(#g)"/>
+  <circle cx="1080" cy="60" r="180" fill="#E8B542" opacity="0.08"/>
+  <circle cx="60" cy="440" r="140" fill="#4A7C3F" opacity="0.12"/>
+  <g transform="scale(0.72) translate(880,60)"><g transform="translate(020,130)" opacity="0.92">
+      <path d="M110 0 L210 40 V120 C210 186 166 226 110 244 C54 226 10 186 10 120 V40 Z" fill="#E8B542"/>
+      <path d="M64 122 L98 156 L160 88" stroke="#E8B542" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g></g>
+  <text x="70" y="250" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="bold" fill="#ffffff">Three inspection points in every order</text>
+  <text x="70" y="300" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#CFE0D6">SibExport · sibexport.ir</text>
+  <rect x="70" y="330" width="48" height="5" rx="2.5" fill="#E8B542"/>
+</svg>
