@@ -1,0 +1,123 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CTASection from '@/components/CTASection.astro';
+import RelatedResources from '@/components/RelatedResources.astro';
+
+const published = [
+  {
+    title: 'Iranian Apple Export: A Practical Guide for International Buyers',
+    description:
+      'The complete picture of buying apples from Iran: origins, categories, specifications, pricing factors, documentation and how a first order actually proceeds.',
+    href: '/blog/iranian-apple-export-guide/',
+    tag: 'Buying guide',
+  },
+];
+
+const plannedTopics = [
+  {
+    title: 'Understanding Iranian apple harvest calendar',
+    description:
+      'How the Iranian apple season progresses across regions, and what it means for your buying windows.',
+  },
+  {
+    title: 'Apple grades and sizing: a buyer\u2019s guide',
+    description:
+      'What count, calibre and grade designations mean in practice for wholesale purchasing.',
+  },
+  {
+    title: 'Choosing the right packaging for long-distance apple shipments',
+    description:
+      'How carton specification, interior packing and pallet configuration protect fruit quality in transit.',
+  },
+  {
+    title: 'Export documentation for fresh fruit: the essentials',
+    description:
+      'The certificates and paperwork behind a smooth customs clearance for apples.',
+  },
+];
+---
+
+<BaseLayout
+  title="Blog & Export Insights — Iranian Apple Trade | SibExport"
+  description="Export insights and buying guides for international apple importers: seasonality, grading, packaging, documentation and market topics from SibExport."
+  path="/blog/"
+  ogImage="/images/blog.png"
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Blog & Export Insights' }]} />
+  <PageHero
+    eyebrow="Insights"
+    title="Blog & export insights"
+    description="Practical guidance for international apple buyers — seasonality, grading, packaging, documentation and market topics."
+  />
+
+  <section class="container-site py-14 lg:py-20">
+    {
+      published.length > 0 && (
+        <div class="grid gap-6 sm:grid-cols-2 mb-12">
+          {published.map((post) => (
+            <a
+              href={post.href}
+              class="reveal group rounded-xl border border-forest-200 bg-card p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+            >
+              <p class="eyebrow">{post.tag}</p>
+              <h2 class="mt-3 text-xl font-semibold">{post.title}</h2>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {post.description}
+              </p>
+              <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700">
+                Read the guide
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      )
+    }
+
+    <div class="reveal mb-10 rounded-xl border border-gold-200 bg-gold-50 p-6">
+      <p class="text-sm leading-relaxed text-charcoal">
+        We are preparing our next in-depth articles. Below are the topics our
+        coming insights will cover — check back soon, or contact us if you
+        need an answer on any of these subjects today.
+      </p>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2">
+      {
+        plannedTopics.map((topic) => (
+          <article class="reveal rounded-xl border border-border bg-card p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+            <p class="eyebrow">Coming soon</p>
+            <h2 class="mt-3 text-lg font-semibold">{topic.title}</h2>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {topic.description}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <RelatedResources
+    title="Regional trade and sourcing resources"
+    intro="Independent third-party services related to regional trade, provided for general reference."
+    links={[
+      {
+        label: 'Business Market Research Services in Iran',
+        href: 'https://www.akaybiz.ir/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA/%D8%AA%D9%88%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%DB%8C%D8%A7%D8%A8%DB%8C',
+        description: 'Commercial market research and business visit services in Iran.',
+      },
+      {
+        label: 'Find Foreign Buyers in Iraq',
+        href: 'https://www.hubsourcing.ir/sourcing/find-foreign-buyer-iraq/',
+        description: 'Buyer sourcing services for the Iraqi wholesale market.',
+      },
+    ]}
+  />
+
+  <CTASection
+    title="Need an answer right now?"
+    description="Skip the wait — message our team with your question and get a direct answer from the people who handle the fruit."
+  />
+</BaseLayout>

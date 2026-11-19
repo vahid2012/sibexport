@@ -1,0 +1,407 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import { CONTACT } from '@/lib/site';
+
+const appleTypes = [
+  'Red Apple',
+  'Golden Apple',
+  'Green Apple',
+  'Mixed Varieties',
+  'Other / Not Sure',
+];
+const units = ['Kilograms', 'Metric Tons', 'Cartons'];
+const packaging = [
+  'Standard Export Carton',
+  'Buyer-Specified Packaging',
+  'Palletized Packaging',
+  'Other / To Be Discussed',
+];
+const inputClass =
+  'w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm transition-colors focus:border-forest-600 focus:outline-none focus:ring-2 focus:ring-forest-600/20';
+---
+
+<BaseLayout
+  title="Request a Quotation — Iranian Apple Export Prices | SibExport"
+  description="Request a quotation for Iranian apples: share your apple type, quantity, packaging and destination requirements and receive a tailored wholesale offer."
+  path="/request-a-quotation/"
+  ogImage="/images/quotation.png"
+>
+  <Breadcrumbs
+    items={[{ label: 'Home', href: '/' }, { label: 'Request a Quotation' }]}
+  />
+  <PageHero
+    eyebrow="Get Started"
+    title="Request a quotation"
+    description="Tell us what you need and we will respond with a tailored offer. The more detail you share, the more precise your quotation."
+  />
+
+  <section class="container-site py-14 lg:py-20">
+    <div class="grid items-start gap-10 lg:grid-cols-3">
+      <div class="reveal space-y-4 lg:col-span-2">
+        <form
+          id="quote-form"
+          class="rounded-xl border border-border bg-card p-6 shadow-sm sm:p-8"
+          novalidate
+        >
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="fullname" class="mb-1.5 block text-sm font-medium"
+                >Full name <span class="text-destructive" aria-hidden="true">*</span></label
+              >
+              <input
+                id="fullname"
+                name="fullname"
+                type="text"
+                required
+                autocomplete="name"
+                class={inputClass}
+                aria-describedby="fullname-error"
+              />
+              <p id="fullname-error" class="mt-1 hidden text-xs font-medium text-destructive" role="alert"
+                >Please enter your full name.</p
+              >
+            </div>
+            <div>
+              <label for="company" class="mb-1.5 block text-sm font-medium"
+                >Company name</label
+              >
+              <input
+                id="company"
+                name="company"
+                type="text"
+                autocomplete="organization"
+                class={inputClass}
+              />
+            </div>
+            <div>
+              <label for="country" class="mb-1.5 block text-sm font-medium"
+                >Country <span class="text-destructive" aria-hidden="true">*</span></label
+              >
+              <input
+                id="country"
+                name="country"
+                type="text"
+                required
+                autocomplete="country-name"
+                class={inputClass}
+                aria-describedby="country-error"
+              />
+              <p id="country-error" class="mt-1 hidden text-xs font-medium text-destructive" role="alert"
+                >Please enter your country.</p
+              >
+            </div>
+            <div>
+              <label for="email" class="mb-1.5 block text-sm font-medium"
+                >Business email <span class="text-destructive" aria-hidden="true">*</span></label
+              >
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                class={inputClass}
+                aria-describedby="email-error"
+              />
+              <p id="email-error" class="mt-1 hidden text-xs font-medium text-destructive" role="alert"
+                >Please enter a valid email address.</p
+              >
+            </div>
+            <div>
+              <label for="whatsapp" class="mb-1.5 block text-sm font-medium"
+                >WhatsApp number <span class="text-destructive" aria-hidden="true">*</span></label
+              >
+              <input
+                id="whatsapp"
+                name="whatsapp"
+                type="tel"
+                required
+                autocomplete="tel"
+                placeholder="+49 30 1234567"
+                class={inputClass}
+                aria-describedby="whatsapp-hint whatsapp-error"
+              />
+              <p id="whatsapp-hint" class="mt-1 text-xs text-muted-foreground"
+                >Include country code.</p
+              >
+              <p id="whatsapp-error" class="mt-1 hidden text-xs font-medium text-destructive" role="alert"
+                >Please enter your WhatsApp number, including country code.</p
+              >
+            </div>
+            <div>
+              <label for="appletype" class="mb-1.5 block text-sm font-medium"
+                >Apple type <span class="text-destructive" aria-hidden="true">*</span></label
+              >
+              <select
+                id="appletype"
+                name="appletype"
+                required
+                class={inputClass}
+                aria-describedby="appletype-error"
+              >
+                <option value="" selected>Select apple type</option>
+                {appleTypes.map((t) => (
+                  <option value={t}>{t}</option>
+                ))}
+              </select>
+              <p id="appletype-error" class="mt-1 hidden text-xs font-medium text-destructive" role="alert"
+                >Please select an apple type.</p
+              >
+            </div>
+            <div class="sm:col-span-2">
+              <span class="mb-1.5 block text-sm font-medium"
+                >Required quantity <span class="text-destructive" aria-hidden="true">*</span></span
+              >
+              <div class="flex gap-3">
+                <div class="flex-1">
+                  <label for="quantity" class="sr-only">Required quantity</label>
+                  <input
+                    id="quantity"
+                    name="quantity"
+                    type="text"
+                    inputmode="numeric"
+                    required
+                    placeholder="e.g. 25"
+                    class={inputClass}
+                    aria-describedby="quantity-error"
+                  />
+                </div>
+                <div class="w-40 shrink-0">
+                  <label for="unit" class="sr-only">Quantity unit</label>
+                  <select id="unit" name="unit" class={inputClass}>
+                    {units.map((u) => (
+                      <option value={u}>{u}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <p id="quantity-error" class="mt-1 hidden text-xs font-medium text-destructive" role="alert"
+                >Please enter the quantity you need.</p
+              >
+            </div>
+            <div>
+              <label for="packaging" class="mb-1.5 block text-sm font-medium"
+                >Preferred packaging</label
+              >
+              <select id="packaging" name="packaging" class={inputClass}>
+                {packaging.map((p) => (
+                  <option value={p}>{p}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label for="destination" class="mb-1.5 block text-sm font-medium"
+                >Destination port or city</label
+              >
+              <input
+                id="destination"
+                name="destination"
+                type="text"
+                placeholder="e.g. Umm Qasr port, Baghdad"
+                class={inputClass}
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="notes" class="mb-1.5 block text-sm font-medium"
+                >Additional requirements</label
+              >
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Sizes, grades, delivery timeline, labeling..."
+                class={inputClass}></textarea>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
+          >
+            Continue to WhatsApp
+          </button>
+          <p class="mt-4 text-xs leading-relaxed text-muted-foreground">
+            Your information is not stored on this website. Submitting this
+            form opens WhatsApp with your inquiry prepared for you to review
+            and send.
+          </p>
+        </form>
+
+        <div
+          id="form-success"
+          class="hidden rounded-xl border border-forest-200 bg-forest-50 p-8 text-center"
+          role="status"
+        >
+          <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-forest-600 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          </div>
+          <h2 class="mt-4 text-xl font-bold">Your inquiry is ready in WhatsApp</h2>
+          <p class="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+            WhatsApp should have opened with your quotation request prepared.
+            Review the message and press send to deliver it to our team.
+          </p>
+          <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              id="success-whatsapp"
+              href={CONTACT.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 rounded-md bg-[#25d366] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:brightness-95"
+            >
+              Open WhatsApp again
+            </a>
+            <button
+              id="back-to-form"
+              type="button"
+              class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-all duration-200 hover:bg-accent"
+            >
+              Edit my details
+            </button>
+          </div>
+          <p class="mx-auto mt-5 max-w-md text-xs leading-relaxed text-muted-foreground">
+            If WhatsApp did not open, your browser may have blocked the pop-up
+            — use the button above, or copy this number into WhatsApp:
+            <span class="font-semibold text-foreground">{CONTACT.whatsappInternational}</span>
+          </p>
+        </div>
+      </div>
+
+      <aside class="reveal space-y-4">
+        <div class="rounded-xl border border-border bg-card p-6 shadow-sm">
+          <h2 class="text-lg font-semibold">What happens next</h2>
+
+<figure class="my-8">
+      <img
+        src="/images/banner-rfq.svg"
+        alt="Quotation request prepared for WhatsApp"
+        width="1200"
+        height="480"
+        loading="lazy"
+        class="w-full rounded-xl border border-border shadow-sm"
+      />
+      <figcaption class="mt-2 text-center text-xs text-muted-foreground">Quotation request prepared for WhatsApp</figcaption>
+    </figure>
+          <ol class="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+            <li class="flex gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-forest-50 text-xs font-bold text-forest-700">1</span>Your WhatsApp message reaches our team directly.</li>
+            <li class="flex gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-forest-50 text-xs font-bold text-forest-700">2</span>We confirm availability and respond with a tailored quotation.</li>
+            <li class="flex gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-forest-50 text-xs font-bold text-forest-700">3</span>We finalize the specification together before any order.</li>
+          </ol>
+        </div>
+        <div class="rounded-xl border border-gold-200 bg-gold-50 p-6">
+          <h2 class="text-lg font-semibold">Prefer another channel?</h2>
+          <p class="mt-2 text-sm leading-relaxed text-charcoal-light">
+            Reach us by email at
+            <a href={CONTACT.emailUrl} class="font-medium text-forest-700 underline underline-offset-2">{CONTACT.email}</a>,
+            by phone at
+            <a href={CONTACT.phoneUrl} class="font-medium text-forest-700 underline underline-offset-2">{CONTACT.phoneInternational}</a>,
+            or through the <a href="/contact/" class="font-medium text-forest-700 underline underline-offset-2">contact page</a>.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('quote-form') as HTMLFormElement | null;
+  const success = document.getElementById('form-success');
+
+  const validators: Record<string, (v: string) => boolean> = {
+    fullname: (v) => v.trim().length >= 2,
+    country: (v) => v.trim().length >= 2,
+    email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    whatsapp: (v) => /^[+\d][\d\s\-()]{6,}$/.test(v.trim()),
+    appletype: (v) => v !== '',
+    quantity: (v) => v.trim() !== '' && /\d/.test(v),
+  };
+
+  const showError = (id: string, show: boolean) => {
+    const input = document.getElementById(id);
+    const error = document.getElementById(`${id}-error`);
+    if (input) input.setAttribute('aria-invalid', String(show));
+    if (error) error.classList.toggle('hidden', !show);
+  };
+
+  const collect = () => {
+    const get = (id: string) =>
+      (document.getElementById(id) as HTMLInputElement | HTMLSelectElement | null)?.value?.trim() ?? '';
+    return {
+      fullname: get('fullname'),
+      company: get('company'),
+      country: get('country'),
+      email: get('email'),
+      whatsapp: get('whatsapp'),
+      appletype: get('appletype'),
+      quantity: get('quantity'),
+      unit: get('unit'),
+      packaging: get('packaging'),
+      destination: get('destination'),
+      notes: get('notes'),
+    };
+  };
+
+  const buildMessage = (d: ReturnType<typeof collect>) =>
+    [
+      'New Apple Export Quotation Request',
+      '',
+      `Full Name: ${d.fullname}`,
+      `Company: ${d.company || '—'}`,
+      `Country: ${d.country}`,
+      `Business Email: ${d.email}`,
+      `WhatsApp: ${d.whatsapp}`,
+      `Apple Type: ${d.appletype}`,
+      `Quantity: ${d.quantity} ${d.unit}`,
+      `Packaging: ${d.packaging || 'To be discussed'}`,
+      `Destination: ${d.destination || '—'}`,
+      `Additional Requirements: ${d.notes || '—'}`,
+    ].join('\n');
+
+  if (form && success) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      for (const [id, validate] of Object.entries(validators)) {
+        const el = document.getElementById(id) as HTMLInputElement | HTMLSelectElement | null;
+        const value = el?.value ?? '';
+        const ok = validate(value);
+        if (!ok) valid = false;
+        showError(id, !ok);
+      }
+
+      if (!valid) {
+        const firstInvalid = form.querySelector('[aria-invalid="true"]');
+        (firstInvalid as HTMLElement | null)?.focus();
+        return;
+      }
+
+      const message = buildMessage(collect());
+      const wa = document.getElementById('success-whatsapp');
+      if (wa) {
+        wa.setAttribute('href', `https://wa.me/989143403431?text=${encodeURIComponent(message)}`);
+      }
+
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Clear individual errors as the user corrects them
+    for (const id of Object.keys(validators)) {
+      const el = document.getElementById(id);
+      el?.addEventListener('input', () => {
+        const validator = validators[id];
+        const value = (el as HTMLInputElement | HTMLSelectElement).value;
+        if (value) showError(id, !validator(value));
+      });
+    }
+
+    document.getElementById('back-to-form')?.addEventListener('click', () => {
+      success.classList.add('hidden');
+      form.classList.remove('hidden');
+      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+</script>

@@ -1,0 +1,650 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CTASection from '@/components/CTASection.astro';
+import RelatedResources from '@/components/RelatedResources.astro';
+import { CONTACT, SITE } from '@/lib/site';
+
+const products = [
+  {
+    name: 'Red Apples',
+    description:
+      'Crisp, colorful red apple varieties sourced from Iranian orchards, sized and graded for international wholesale buyers.',
+    href: '/red-apple-export/',
+    accent: 'bg-apple-50 border-apple-100',
+    dot: 'bg-apple-500',
+  },
+  {
+    name: 'Golden Apples',
+    description:
+      'Golden-yellow apples with a balanced sweet flavor, carefully handled from harvest to export packing.',
+    href: '/golden-apple-export/',
+    accent: 'bg-gold-50 border-gold-100',
+    dot: 'bg-gold-400',
+  },
+  {
+    name: 'Green Apples',
+    description:
+      'Fresh, tangy green apples selected for firmness and shelf life, ready for long-distance export shipments.',
+    href: '/green-apple-export/',
+    accent: 'bg-forest-50 border-forest-100',
+    dot: 'bg-forest-500',
+  },
+];
+
+const strengths = [
+  {
+    title: 'Orchard-level sourcing in West Azerbaijan',
+    description:
+      'SibExport is based in Urmia, one of Iran\u2019s principal apple-growing regions. Working close to the orchards means we can follow fruit from the tree through sorting, packing and loading \u2014 and step in early when something threatens quality.',
+  },
+  {
+    title: 'Export-grade sorting and grading discipline',
+    description:
+      'Every order is packed against an agreed specification: size count, color, firmness and freedom from defects. Buyers receive what was confirmed, because the specification is written down before the first carton is filled.',
+  },
+  {
+    title: 'Direct commercial communication',
+    description:
+      'You speak with the people who actually handle your fruit \u2014 not an intermediary chain. Inquiries are answered in clear English on WhatsApp, by phone or by email, and questions about grades, packing or documents get direct answers.',
+  },
+  {
+    title: 'Documentation handled to destination requirements',
+    description:
+      'Fresh fruit only moves as fast as its paperwork. We coordinate the export documents your customs clearance requires \u2014 commercial invoice, packing list, certificate of origin and phytosanitary certification \u2014 so cargo is not held at the border over avoidable formalities.',
+  },
+];
+
+const steps = [
+  {
+    title: 'Inquiry & Requirements',
+    description:
+      'Share the variety, volume, grade and destination you need through our quotation form or WhatsApp.',
+  },
+  {
+    title: 'Quotation & Confirmation',
+    description:
+      'We respond with a tailored offer covering pricing terms, packaging and delivery options.',
+  },
+  {
+    title: 'Sourcing & Quality Control',
+    description:
+      'Apples are sourced from trusted orchards, then sorted, graded and inspected to your specification.',
+  },
+  {
+    title: 'Packing & Documentation',
+    description:
+      'Fruit is packed in export-standard cartons with complete shipping and phytosanitary documentation.',
+  },
+  {
+    title: 'Shipping & Delivery',
+    description:
+      'Cargo is dispatched via agreed transport routes with updates shared throughout the journey.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What apple products can I inquire about?',
+    a: 'SibExport supplies red, golden and green apple classes sourced from Iranian orchards. Within each class we discuss variety, size count, grade and packing configuration against your market\u2019s requirements. Seasonal availability is always confirmed per order rather than assumed.',
+  },
+  {
+    q: 'How do I request a wholesale quotation?',
+    a: 'Use the quotation request form, message us on WhatsApp, or send an email. The most useful inquiries include the variety or color class, target sizes, estimated volume, packing preference and destination country. You will receive a tailored offer based on what you actually need.',
+  },
+  {
+    q: 'Which destination markets do you serve?',
+    a: 'Our position in northwest Iran supports efficient shipments to Iraq, the United Arab Emirates, Russia, Armenia, Azerbaijan and Central Asia, as well as other markets where trade is legally and commercially feasible. We confirm destination options honestly for each order \u2014 we do not claim routes we cannot currently serve.',
+  },
+  {
+    q: 'Can packaging be adapted to my market?',
+    a: 'Yes. Export carton specification, interior packaging, pallet configuration and labeling are all confirmed per order. If your market expects a particular carton count, net weight or retail-ready format, tell us during the quotation stage so it is built into the offer.',
+  },
+];
+---
+
+<BaseLayout
+  title="SibExport — Iranian Apple Exporter & Wholesale Supplier"
+  description="SibExport is an Iranian apple exporter supplying fresh red, golden and green apples in bulk to international importers, distributors and wholesale buyers. Request a quotation."
+  path="/"
+  ogImage="/images/home-hero.png"
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-forest-950">
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,#2B5443_0%,#1D372D_55%,#0E1F18_100%)]"
+      aria-hidden="true"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gold-400/10 blur-3xl"
+      aria-hidden="true"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute -bottom-32 -left-16 h-80 w-80 rounded-full bg-forest-400/10 blur-3xl"
+      aria-hidden="true"
+    >
+    </div>
+
+    <div class="container-site relative py-20 sm:py-24 lg:py-32">
+      <div class="max-w-3xl">
+        <p
+          class="eyebrow text-gold-300"
+          style="animation: fade-in 0.6s ease-out both;"
+        >
+          Iranian Apple Export &amp; Wholesale Supply
+        </p>
+        <h1
+          class="mt-4 text-4xl font-bold leading-[1.15] text-white sm:text-5xl lg:text-6xl"
+          style="animation: fade-in-up 0.7s ease-out both;"
+        >
+          From Iranian Orchards to
+          <span class="text-gold-300">Global Markets</span>
+        </h1>
+        <p
+          class="mt-4 text-lg font-medium text-forest-100 sm:text-xl"
+          style="animation: fade-in-up 0.7s ease-out 0.1s both;"
+        >
+          Premium Iranian Apples for Global Markets
+        </p>
+        <p
+          class="mt-6 max-w-2xl text-base leading-relaxed text-forest-100/90 sm:text-lg"
+          style="animation: fade-in-up 0.7s ease-out 0.2s both;"
+        >
+          SibExport is an Iranian apple exporter and wholesale supplier based
+          in Urmia, West Azerbaijan. We source fresh red, golden and green
+          apples from established regional orchards and supply them to
+          importers, wholesale distributors and commercial buyers in
+          international markets \u2014 with written specifications, disciplined
+          grading and export-standard packing.
+        </p>
+        <div
+          class="mt-9 flex flex-col gap-3 sm:flex-row"
+          style="animation: fade-in-up 0.7s ease-out 0.3s both;"
+        >
+          <a
+            href="/request-a-quotation/"
+            class="inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-3.5 text-sm font-semibold text-forest-900 shadow-md transition-all duration-200 hover:bg-forest-50 hover:shadow-lg"
+          >
+            Request a Quotation
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+          <a
+            href={CONTACT.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 rounded-md border border-forest-300/40 px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-forest-900/60"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction prose -->
+  <section class="container-site py-16 lg:py-20">
+    <div class="prose-site mx-auto max-w-3xl">
+      <h2>Buying Iranian apples, done professionally</h2>
+      <p>
+        International apple trade runs on a simple formula: buyers need
+        consistent fruit, delivered on confirmed terms, at a price that works
+        for both sides. Everything complicated about it — sourcing across
+        dozens of orchards, grading to different countries' expectations,
+        documentation, borders, cold chains — is execution detail in service
+        of that formula. SibExport was built around getting the execution
+        right.
+      </p>
+      <p>
+        We are an Iranian apple exporter and wholesale supplier based in
+        Urmia, the commercial center of West Azerbaijan and one of the most
+        productive apple regions in the country. From this position we source
+        <strong>fresh red, golden and green apples in bulk</strong> for
+        importers, wholesale distributors, supermarket purchasing departments,
+        fruit traders and sourcing agents across regional and international
+        markets.
+      </p>
+      <p>
+        Our way of working is deliberately unglamorous. We agree a written
+        specification with every buyer before sourcing begins: the category,
+        the size count, the grade, the packing. We inspect against it at
+        sourcing, at packing and at loading. We confirm what the season can
+        actually deliver instead of promising a variety list we may not be
+        able to honor. And when a destination or a volume does not make
+        commercial sense, we say so at quotation stage rather than after the
+        buyer's deposit.
+      </p>
+      <p>
+        Buyers who work with other origins often notice the difference in
+        small moments: the answer about size availability that comes back the
+        same day; the packing plan that arrives before it is needed; the
+        quotation whose numbers still mean something three weeks later. That
+        is the experience we sell — the apples are how we prove it.
+      </p>
+      <h3>What you can inquire about</h3>
+      <p>
+        The commercial categories on this site reflect what we actively
+        source and supply: <a href="/red-apple-export/">red apple export from
+        Iran</a> for volume and retail programs, <a
+        href="/golden-apple-export/">golden apples</a> for sweet-profile
+        markets, and <a href="/green-apple-export/">green apples</a> for
+        buyers completing a three-color range. Within each category, variety
+        availability is confirmed per season against your written
+        specification.
+      </p>
+      <h3>How a first order typically starts</h3>
+      <p>
+        Most new buyers begin with one of two moves. Some send a full
+        specification through the <a href="/request-a-quotation/">quotation
+        form</a> — variety, sizes, volume, destination — and receive a
+        tailored offer. Others start with a short WhatsApp message and build
+        the specification through conversation; both are equally welcome.
+        Either way, the first response you receive is an honest answer about
+        what we can supply, not a sales brochure.
+      </p>
+    </div>
+  </section>
+
+  <!-- Who we serve -->
+  <section class="container-site py-16 lg:py-20">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="eyebrow">Who We Work With</p>
+      <h2 class="mt-2 text-3xl font-bold sm:text-4xl">
+        Built for professional fruit buyers
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+        SibExport exists to make buying Iranian apples straightforward for
+        professionals whose businesses depend on consistent fruit and honest
+        suppliers.
+      </p>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        [
+          'Fruit importers',
+          'Wholesale distributors',
+          'Supermarket purchasing teams',
+          'Fruit traders and resellers',
+          'Food distribution companies',
+          'Commercial procurement departments',
+          'Sourcing agents',
+          'Fresh produce exporters',
+        ].map((audience) => (
+          <div class="reveal flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3.5 shadow-sm">
+            <span class="h-2 w-2 shrink-0 rounded-full bg-forest-500" aria-hidden="true" />
+            <span class="text-sm font-medium text-foreground">{audience}</span>
+          </div>
+        ))
+      }
+    </div>
+    <div class="prose-site mx-auto mt-10 max-w-3xl">
+      <h3>What different buyers need from a supplier</h3>
+      <p>
+        A supermarket purchasing department needs traceable, consistent fruit
+        and documentation that survives an audit. A wholesale distributor
+        needs volume that arrives when promised, in a grade their customers
+        recognize on sight. A sourcing agent needs a responsive partner on
+        the ground who reports accurately rather than optimistically. A fruit
+        trader needs pricing that reflects the market they will resell into.
+      </p>
+      <p>
+        The written-specification workflow we use serves all four, because it
+        replaces persuasion with verifiable detail. If your role has
+        requirements you do not see addressed here — audit documentation,
+        private labeling, inspection protocols — raise them at quotation
+        stage. The answer may be yes, or it may be an honest no; either is
+        more useful than a surprise.
+      </p>
+    </div>
+  </section>
+
+  <!-- Strengths -->
+  <section class="bg-secondary/60 py-16 lg:py-20">
+    <div class="container-site">
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <p class="eyebrow">Why SibExport</p>
+        <h2 class="mt-2 text-3xl font-bold sm:text-4xl">
+          An Iranian apple supplier that works the way buyers need
+        </h2>
+        <p class="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          Importing fresh fruit is a business of details. Here is how we
+          handle the ones that decide whether a shipment succeeds.
+        </p>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2">
+        {
+          strengths.map((item, i) => (
+            <div
+              class="reveal rounded-xl border border-border bg-card p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              style={`transition-delay:${(i % 2) * 0.08}s`}
+            >
+              <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-forest-50 text-forest-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold">{item.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="container-site py-16 lg:py-20">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="eyebrow">Our Products</p>
+      <h2 class="mt-2 text-3xl font-bold sm:text-4xl">
+        Iranian apple varieties for every market
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+        Iran is one of the world\u2019s major apple producers, and the
+        country\u2019s orchards supply a wide range of commercial varieties.
+        SibExport concentrates on three principal color classes, each with its
+        own commercial profile.
+      </p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      {
+        products.map((product) => (
+          <a
+            href={product.href}
+            class={`group rounded-xl border p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${product.accent}`}
+          >
+            <span class="flex items-center gap-3">
+              <span class={`h-3 w-3 rounded-full ${product.dot}`} aria-hidden="true" />
+              <h3 class="text-xl font-semibold text-foreground">
+                {product.name}
+              </h3>
+            </span>
+            <p class="mt-3 text-sm leading-relaxed text-charcoal-light">
+              {product.description}
+            </p>
+            <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700">
+              Explore
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+    <div class="reveal mt-10 text-center">
+      <a href="/iranian-apple-varieties/" class="btn-secondary"
+        >View all Iranian apple varieties</a
+      >
+    </div>
+  </section>
+
+  <!-- Quality & packaging overview -->
+  <section class="bg-secondary/60 py-16 lg:py-20">
+    <div class="container-site grid items-start gap-10 lg:grid-cols-2">
+      <div class="reveal">
+        <p class="eyebrow">Quality &amp; Grading</p>
+        <h2 class="mt-2 text-3xl font-bold">Consistency you can order against</h2>
+        <p class="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          Wholesale buyers do not just buy apples \u2014 they buy
+          repeatability. Every SibExport order is packed against a written
+          specification covering size count, color, firmness and allowable
+          defects, agreed before sourcing begins. Fruit is inspected at
+          sourcing, after packing and again at loading.
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          We do not make quality claims we cannot evidence. Instead, we define
+          what will be delivered in writing and stand behind it at every
+          inspection point.
+        </p>
+        <a
+          href="/apple-quality-specifications/"
+          class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700"
+        >
+          Read about quality &amp; grading
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+        </a>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Packaging &amp; Preparation</p>
+        <h2 class="mt-2 text-3xl font-bold">Packed to survive the journey</h2>
+        <p class="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          Iranian apples bound for international markets typically travel
+          thousands of kilometers by road or sea. Carton specification,
+          interior packaging, ventilation and pallet configuration all affect
+          the condition your fruit arrives in. We prepare packaging to the
+          destination\u2019s climate, transit length and retail channel.
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          Every packing plan is confirmed with the buyer before production
+          begins \u2014 including labeling and any branding your market
+          requires.
+        </p>
+        <a
+          href="/apple-packaging/"
+          class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700"
+        >
+          Read about export packaging
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="container-site py-16 lg:py-20">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="mt-2 text-3xl font-bold sm:text-4xl">
+        A clear export process from inquiry to delivery
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+        Importing apples from Iran follows a defined commercial path. We keep
+        every step visible so you always know where your order stands.
+      </p>
+    </div>
+    <ol class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+      {
+        steps.map((step, index) => (
+          <li class="reveal relative" style={`transition-delay:${index * 0.08}s`}>
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-forest-700 text-sm font-bold text-white">
+              {index + 1}
+            </span>
+            <h3 class="mt-4 text-base font-semibold">{step.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {step.description}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+    <div class="reveal mt-12 text-center">
+      <a href="/apple-export-process/" class="btn-primary"
+        >See the full export process</a
+      >
+    </div>
+  </section>
+
+  <!-- Markets -->
+  <section class="bg-forest-950 py-16 lg:py-20">
+    <div class="container-site">
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <p class="eyebrow text-gold-300">Target Markets</p>
+        <h2 class="mt-2 text-3xl font-bold text-white sm:text-4xl">
+          Positioned for regional and international trade
+        </h2>
+        <p class="mt-4 text-sm leading-relaxed text-forest-100 sm:text-base">
+          Northwest Iran\u2019s position, road infrastructure and seasonal
+          production make it a practical origin for fresh apple shipments to
+          neighboring economies and beyond.
+        </p>
+      </div>
+      <ul
+        class="reveal mt-10 flex flex-wrap items-center justify-center gap-3"
+        aria-label="Target export markets"
+      >
+        {
+          [
+            'Iraq',
+            'United Arab Emirates',
+            'Russia',
+            'Armenia',
+            'Azerbaijan',
+            'Central Asia',
+          ].map((market) => (
+            <li class="rounded-full border border-forest-700 bg-forest-900 px-5 py-2.5 text-sm font-medium text-forest-100 transition-colors duration-200 hover:border-gold-400/50 hover:text-white">
+              {market}
+            </li>
+          ))
+        }
+      </ul>
+      <p class="reveal mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-forest-300">
+        Active trade routes depend on seasonal, commercial and regulatory
+        factors at the time of each order. Contact us to discuss current
+        destination options for your market \u2014 we confirm honestly what we
+        can serve.
+      </p>
+    </div>
+  </section>
+
+  <!-- Origin story: Urmia -->
+  <section class="container-site py-16 lg:py-20">
+    <div class="prose-site mx-auto max-w-3xl">
+      <h2>Why apples from Urmia, West Azerbaijan</h2>
+
+<figure class="my-8">
+      <img
+        src="/images/banner-origin.svg"
+        alt="Apple orchards of West Azerbaijan, Iran"
+        width="1200"
+        height="480"
+        loading="lazy"
+        class="w-full rounded-xl border border-border shadow-sm"
+      />
+      <figcaption class="mt-2 text-center text-xs text-muted-foreground">Apple orchards of West Azerbaijan, Iran</figcaption>
+    </figure>
+      <p>
+        Not all apple origins are equal, and the differences are not
+        marketing — they are climate. West Azerbaijan sits on a high
+        plateau in Iran's northwest, where cold winters give orchards the
+        dormancy apples need and long, sunny autumn days let fruit develop
+        sugar and color before harvest. The region around Urmia has
+        accumulated generations of apple-growing knowledge: which slopes
+        ripen earliest, which varieties hold best in storage, how a season's
+        weather will show up in the fruit.
+      </p>
+      <p>
+        For a buyer, the practical meaning is this: <strong>apples from this
+        region arrive with the firmness, sugar development and shelf life
+        that wholesale trade requires</strong> — provided the handling
+        between orchard and loading is disciplined. That "provided" is where
+        suppliers differ, and it is why our process emphasizes written
+        specifications and three-stage inspection rather than assurances.
+      </p>
+      <p>
+        Being based in Urmia rather than a distant capital also changes what
+        a buyer can expect operationally. Questions about a specific lot can
+        be answered from the packing floor, not from a forwarding email.
+        Problems — a weather event, a storage constraint — surface early,
+        while there is still time to adjust. And when a buyer wants to visit
+        during harvest or meet before a first order, the orchards are
+        minutes away, not a domestic flight.
+      </p>
+      <h3>The season, in buyer terms</h3>
+      <p>
+        Iran's apple harvest in this region typically moves from late summer
+        into autumn, with different varieties and elevations ripening in
+        sequence. Early-season fruit goes to market quickly; fruit for later
+        programs moves into cold storage, extending availability across
+        winter and spring. What this means for planning: buyers can usually
+        source Iranian apples for much of the year, but the variety, size
+        profile and price position shift with the season — which is why we
+        confirm availability per order rather than publishing a fixed
+        calendar.
+      </p>
+      <p>
+        If your market's demand pattern is concentrated — Ramadan, festive
+        seasons, a summer peak — tell us. Planning harvest and storage
+        positions against your real demand window is one of the most
+        valuable conversations a buyer and supplier can have, and it works
+        best months ahead rather than weeks.
+      </p>
+    </div>
+  </section>
+
+  <!-- Reasons to contact -->
+  <section class="container-site py-16 lg:py-20">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="eyebrow">Work With Us</p>
+      <h2 class="mt-2 text-3xl font-bold sm:text-4xl">
+        Reasons buyers contact SibExport
+      </h2>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        [
+          'First-time buyers exploring Iranian apple supply for their market',
+          'Established importers seeking an additional, dependable origin',
+          'Buyers needing a specific size count or grade configuration',
+          'Distributors planning seasonal programs around the Iranian harvest',
+          'Trading houses comparing quotes across origins and suppliers',
+          'Sourcing agents requiring a responsive local partner in Urmia',
+        ].map((reason) => (
+          <div class="reveal flex items-start gap-3 rounded-lg border border-border bg-card px-5 py-4 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-forest-600" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+            <span class="text-sm leading-relaxed text-foreground">{reason}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- FAQ preview -->
+  <section class="bg-secondary/60 py-16 lg:py-20">
+    <div class="container-site">
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <p class="eyebrow">Common Questions</p>
+        <h2 class="mt-2 text-3xl font-bold sm:text-4xl">
+          Frequently asked questions
+        </h2>
+      </div>
+      <div class="mx-auto mt-10 max-w-3xl space-y-3">
+        {
+          faqs.map((faq) => (
+            <details class="reveal group rounded-xl border border-border bg-card shadow-sm open:shadow-md">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl p-5 text-left font-semibold text-foreground transition-colors duration-200 hover:text-forest-700 [&::-webkit-details-marker]:hidden">
+                {faq.q}
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+              </summary>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                {faq.a}
+              </p>
+            </details>
+          ))
+        }
+      </div>
+      <div class="reveal mt-8 text-center">
+        <a href="/faq/" class="btn-secondary">View all questions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <RelatedResources
+    title="Apple export resources from the region"
+    intro="Independent regional resources covering Urmia apple trade and export activity, provided for general commercial reference."
+    links={[
+      {
+        label: 'Urmia Apple Export and Wholesale',
+        href: 'https://www.palude.ir/export/urmia-apple-export-wholesale/',
+        description: 'Regional overview of apple export and wholesale activity from Urmia.',
+      },
+      {
+        label: 'Apple Export from Urmia to Turkey and Iraq',
+        href: 'https://www.urummarkaz.ir/export-apple-urmia-turkey-iraq',
+        description: 'Regional trade routes for Iranian apples toward Turkey and Iraq.',
+      },
+    ]}
+  />
+
+  <CTASection />
+</BaseLayout>

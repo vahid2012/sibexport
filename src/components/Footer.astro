@@ -1,0 +1,164 @@
+---
+import {
+  SITE,
+  CONTACT,
+  SOCIAL,
+  FOOTER_COMPANY_LINKS,
+  FOOTER_PRODUCT_LINKS,
+  FOOTER_SUPPORT_LINKS,
+} from '@/lib/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-forest-950 text-forest-50">
+  <div class="container-site py-14 lg:py-16">
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Brand -->
+      <div class="space-y-4">
+        <img
+          src="/brand/logo-horizontal-dark.svg"
+          alt="SibExport — Iranian Apple Export"
+          width="180"
+          height="48"
+          class="h-12 w-auto"
+          loading="lazy"
+          decoding="async"
+        />
+        <p class="text-sm leading-relaxed text-forest-200">
+          {SITE.tagline}. SibExport sources and supplies premium Iranian apples
+          for international importers, distributors and wholesale buyers.
+        </p>
+        <div class="flex items-center gap-3">
+          <a
+            href={SOCIAL.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="SibExport on Facebook"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-forest-900 text-forest-100 transition-colors duration-200 hover:bg-forest-700"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a
+            href={SOCIAL.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="SibExport on Instagram"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-forest-900 text-forest-100 transition-colors duration-200 hover:bg-forest-700"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </a>
+          <a
+            href={SOCIAL.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="SibExport on LinkedIn"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-forest-900 text-forest-100 transition-colors duration-200 hover:bg-forest-700"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <nav aria-label="Company links">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-forest-100">
+          Company
+        </h3>
+        <ul class="mt-4 space-y-2.5">
+          {
+            FOOTER_COMPANY_LINKS.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-forest-200 transition-colors duration-200 hover:text-white"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <!-- Products -->
+      <nav aria-label="Product links">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-forest-100">
+          Apples
+        </h3>
+        <ul class="mt-4 space-y-2.5">
+          {
+            FOOTER_PRODUCT_LINKS.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-forest-200 transition-colors duration-200 hover:text-white"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-forest-100">
+          Contact
+        </h3>
+        <ul class="mt-4 space-y-3 text-sm text-forest-200">
+          <li>
+            <a
+              href={CONTACT.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-colors duration-200 hover:text-white"
+            >
+              WhatsApp: {CONTACT.whatsappInternational}
+            </a>
+          </li>
+          <li>
+            <a
+              href={CONTACT.phoneUrl}
+              class="transition-colors duration-200 hover:text-white"
+            >
+              Phone: {CONTACT.phoneInternational}
+            </a>
+          </li>
+          <li>
+            <a
+              href={CONTACT.emailUrl}
+              class="transition-colors duration-200 hover:text-white"
+            >
+              {CONTACT.email}
+            </a>
+          </li>
+          <li class="leading-relaxed">{CONTACT.address}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-forest-900 pt-6 sm:flex-row"
+    >
+      <p class="text-xs text-forest-300">
+        &copy; {year} SibExport. All rights reserved.
+      </p>
+      <ul class="flex items-center gap-5">
+        {
+          FOOTER_SUPPORT_LINKS.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-xs text-forest-300 transition-colors duration-200 hover:text-white"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

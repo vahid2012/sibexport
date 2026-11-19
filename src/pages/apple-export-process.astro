@@ -1,0 +1,202 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CTASection from '@/components/CTASection.astro';
+import RelatedResources from '@/components/RelatedResources.astro';
+import { CONTACT } from '@/lib/site';
+
+const steps = [
+  {
+    title: 'Buyer inquiry',
+    description:
+      'You contact SibExport through the quotation form, WhatsApp or email with your initial requirement. Even a short message — variety, rough volume, destination — is enough to start the conversation.',
+  },
+  {
+    title: 'Product and quantity specification',
+    description:
+      'We work through the details together: category and variety, size count, grade, packing configuration and any special requirements your market expects.',
+  },
+  {
+    title: 'Availability confirmation',
+    description:
+      'We confirm what the current season can genuinely deliver against your specification — variety, volumes and timeframe. If something cannot be supplied, we say so plainly.',
+  },
+  {
+    title: 'Quotation',
+    description:
+      'You receive a written offer covering price, Incoterms, packing specification and delivery schedule. Every figure is tied to the specification agreed in step two.',
+  },
+  {
+    title: 'Commercial agreement',
+    description:
+      'Terms are finalized and the order is confirmed. Payment conditions and both parties\u2019 obligations are put in writing before sourcing begins.',
+  },
+  {
+    title: 'Quality and packaging confirmation',
+    description:
+      'The specification sheet — fruit standard and packing plan — is finalized and signed off. This document governs grading, packing and loading.',
+  },
+  {
+    title: 'Export documentation coordination',
+    description:
+      'We prepare and coordinate the documents your destination requires: commercial invoice, packing list, certificate of origin and phytosanitary certification among them.',
+  },
+  {
+    title: 'Transportation arrangements',
+    description:
+      'Transport is arranged for the agreed route and terms — road freight to regional destinations, with refrigeration where the route requires it.',
+  },
+  {
+    title: 'Shipment and delivery coordination',
+    description:
+      'Cargo is loaded under supervision against the specification, dispatched, and tracked. We keep you informed through transit to arrival and support a smooth clearance.',
+  },
+];
+---
+
+<BaseLayout
+  title="How to Import Fresh Apples from Iran — Export Process | SibExport"
+  description="How to import fresh apples from Iran: the SibExport export process step by step — inquiry, specification, quotation, documentation, transport and delivery."
+  path="/apple-export-process/"
+  ogImage="/images/process.png"
+>
+  <Breadcrumbs
+    items={[{ label: 'Home', href: '/' }, { label: 'Apple Export Process' }]}
+  />
+  <PageHero
+    eyebrow="Process"
+    title="How to import fresh apples from Iran"
+    description="Importing fresh fruit is a business of coordinated steps. Here is the exact workflow a SibExport order follows — from your first message to delivered cargo."
+  />
+
+  <article class="container-site py-14 lg:py-20">
+    <div class="prose-site mx-auto max-w-3xl">
+      <h2>A defined workflow protects both sides</h2>
+      <p>
+        First-time importers often imagine that buying fruit abroad is
+        improvised: a phone call, a price, a truck. Experienced buyers know
+        the opposite is true — reliable supply comes from a defined workflow
+        where expectations are written down before money moves. The process
+        below is how SibExport orders actually run, in nine steps.
+      </p>
+      <p>
+        One honest note before the detail: <strong>the workflow describes how
+        we operate, and each step is confirmed per order.</strong> Timelines,
+        documents and transport modes depend on your destination, the season
+        and the commercial terms agreed — which is exactly why the early
+        steps exist.
+      </p>
+    </div>
+
+    <ol class="relative mx-auto mt-12 max-w-3xl space-y-0 border-l-2 border-forest-100 pl-8">
+      {
+        steps.map((step, index) => (
+          <li class="reveal relative pb-10 last:pb-0">
+            <span
+              class="absolute -left-[2.85rem] flex h-8 w-8 items-center justify-center rounded-full bg-forest-700 text-xs font-bold text-white ring-4 ring-background"
+              aria-hidden="true"
+            >
+              {index + 1}
+            </span>
+            <h2 class="text-lg font-semibold sm:text-xl">{step.title}</h2>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              {step.description}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <div class="prose-site mx-auto mt-6 max-w-3xl">
+      <h2>What we need from you to start</h2>
+      <p>
+        Step one costs you nothing but a message. The most useful first
+        inquiry includes:
+      </p>
+      <ul>
+        <li>The apple category or the profile your market expects (red, golden, green)</li>
+        <li>Target size count or fruit size, if you know it</li>
+        <li>Estimated volume — even a rough range helps</li>
+        <li>Destination country or city</li>
+        <li>Any packing or labeling requirement your market has</li>
+        <li>Your intended delivery window</li>
+      </ul>
+      <p>
+        Missing a detail? Send what you have. The specification is refined
+        together in step two — that is what it is for.
+      </p>
+
+      <h2>Documentation, in plain terms</h2>
+
+<figure class="my-8">
+      <img
+        src="/images/banner-docs.svg"
+        alt="Export documentation coordination for apple shipments"
+        width="1200"
+        height="480"
+        loading="lazy"
+        class="w-full rounded-xl border border-border shadow-sm"
+      />
+      <figcaption class="mt-2 text-center text-xs text-muted-foreground">Export documentation coordination for apple shipments</figcaption>
+    </figure>
+      <p>
+        Fresh fruit shipments live and die on paperwork. The documents
+        commonly involved in an Iranian apple export include the commercial
+        invoice, packing list, certificate of origin and phytosanitary
+        certificate — with additional requirements varying by destination.
+        Which documents your shipment needs is confirmed during step seven,
+        based on your destination's actual import regulations. We coordinate
+        their preparation and share copies with you before dispatch.
+      </p>
+
+      <h2>Timelines, honestly</h2>
+      <p>
+        We deliberately do not publish fixed lead times, because an honest
+        schedule depends on the season, the fruit's storage situation, the
+        packing queue and your destination's transit time. When you request a
+        quotation, tell us your delivery window and we will confirm a
+        realistic schedule against it — including any limits we can see. A
+        date we cannot meet is a date we will not promise.
+      </p>
+
+      <h2>For first-time importers</h2>
+      <p>
+        If you have never bought from Iran before, the process above is
+        designed for you: each step is explained, each commitment is written,
+        and you always know what happens next. Many buyers start with a
+        single truck or container to test their market — a sensible approach
+        we are glad to support. The <a href="/faq/">FAQ</a> answers the
+        questions first-time buyers ask most, and the
+        <a href="/request-a-quotation/">quotation form</a> takes the
+        information needed to prepare your first offer.
+      </p>
+      <p>
+        Regional trade context — including apple export activity from Urmia
+        toward Turkey and Iraq — is available in the independent resources
+        below.
+      </p>
+    </div>
+  </article>
+
+  <RelatedResources
+    title="Regional trade resources"
+    links={[
+      {
+        label: 'Apple Export from Urmia to Turkey and Iraq',
+        href: 'https://www.urummarkaz.ir/export-apple-urmia-turkey-iraq',
+        description: 'Independent regional reference on Iranian apple trade routes toward Turkey and Iraq.',
+      },
+      {
+        label: 'Find Foreign Buyers in Iraq',
+        href: 'https://www.hubsourcing.ir/sourcing/find-foreign-buyer-iraq/',
+        description: 'Buyer sourcing services for the Iraqi market, provided by a third party.',
+      },
+    ]}
+  />
+
+  <CTASection
+    title="Start step one today"
+    description={`Send us your requirements — via the quotation form or WhatsApp ${CONTACT.whatsappInternational} — and the process begins with a simple conversation.`}
+  />
+</BaseLayout>

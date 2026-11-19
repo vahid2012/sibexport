@@ -1,0 +1,85 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CTASection from '@/components/CTASection.astro';
+
+const faqs = [
+  {
+    q: 'What apple products does SibExport supply?',
+    a: 'SibExport supplies red, golden and green apple classes sourced from Iranian orchards, in export grades with sizing and packing configured to buyer requirements.',
+  },
+  {
+    q: 'What is the minimum order quantity (MOQ)?',
+    a: 'Minimum order quantities depend on the variety, packing configuration and destination. Share your requirement and we will confirm the applicable MOQ with your quotation.',
+  },
+  {
+    q: 'How do I request a quotation?',
+    a: 'Use the quotation request form on this website, message us on WhatsApp, or send an email with your variety, size, volume, packing and destination requirements. We respond with a tailored offer.',
+  },
+  {
+    q: 'What information should my inquiry include?',
+    a: 'Helpful details include: apple variety or color class, target sizes or count per carton, grade, estimated volume, preferred packing, destination market and any delivery timeline.',
+  },
+  {
+    q: 'What packing options are available?',
+    a: 'We pack in export-grade cartons with protective interior packaging, and can arrange retail-ready packs and destination-specific labeling. See our apple packaging page for details.',
+  },
+  {
+    q: 'Which countries do you ship to?',
+    a: 'We are positioned to serve markets including Iraq, the United Arab Emirates, Russia, Armenia, Azerbaijan and Central Asia. Active routes depend on seasonal, commercial and regulatory factors — contact us to confirm options for your destination.',
+  },
+  {
+    q: 'What documentation is provided with shipments?',
+    a: 'Standard export documentation is prepared per destination requirements, including commercial invoices, packing lists, certificates of origin and phytosanitary certification.',
+  },
+  {
+    q: 'When is Iranian apple season?',
+    a: 'The main harvest typically runs from late summer through autumn, with cold-storage supply extending availability for much of the year. Contact us for current availability.',
+  },
+  {
+    q: 'How can I track my order status?',
+    a: 'Our team shares updates from packing through dispatch and transit via WhatsApp or email, so you always know where your cargo stands.',
+  },
+];
+---
+
+<BaseLayout
+  title="Frequently Asked Questions — Iranian Apple Export | SibExport"
+  description="Answers to common questions about SibExport's Iranian apple export service: MOQs, quotations, packing, documentation, destinations and seasonality."
+  path="/faq/"
+  ogImage="/images/faq.png"
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Frequently Asked Questions' }]} />
+  <PageHero
+    eyebrow="Support"
+    title="Frequently asked questions"
+    description="Quick answers about our products, process and requirements. If your question is not covered, contact us directly."
+  />
+
+  <section class="container-site py-14 lg:py-20">
+    <div class="mx-auto max-w-3xl space-y-3">
+      {
+        faqs.map((faq, index) => (
+          <details
+            class="reveal group rounded-xl border border-border bg-card shadow-sm transition-shadow duration-200 open:shadow-md"
+            style={`transition-delay:${Math.min(index, 5) * 0.05}s`}
+          >
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl p-5 text-left font-semibold text-foreground transition-colors duration-200 hover:text-forest-700 [&::-webkit-details-marker]:hidden">
+              {faq.q}
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+            </summary>
+            <p class="px-5 pb-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              {faq.a}
+            </p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+
+  <CTASection
+    title="Still have questions?"
+    description="Our team is happy to help — reach out on WhatsApp or through the contact page."
+  />
+</BaseLayout>

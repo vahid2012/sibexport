@@ -1,0 +1,96 @@
+---
+import { SITE, CONTACT } from '@/lib/site';
+
+export type SEOProps = {
+  title: string;
+  description: string;
+  path?: string;
+  ogType?: 'website' | 'article';
+  ogImage?: string;
+  noindex?: boolean;
+};
+
+const canonical = ({ path }: { path?: string }) => {
+  if (!path) return SITE.domain;
+  const clean = path.startsWith('/') ? path : `/${path}`;
+  return `${SITE.domain}${clean}`;
+};
+const url = canonical({ path: Astro.props.path });
+const image = (Astro.props.ogImage ?? `${SITE.domain}/brand/apple-touch-icon.png`).startsWith('http')
+  ? (Astro.props.ogImage ?? `${SITE.domain}/brand/apple-touch-icon.png`)
+  : `${SITE.domain}${Astro.props.ogImage ?? ''}`;
+---
+
+<!-- Primary Meta Tags -->
+<title>{Astro.props.title}</title>
+<meta name="title" content={Astro.props.title} />
+<meta name="description" content={Astro.props.description} />
+<link rel="canonical" href={url} />
+{
+  Astro.props.noindex && (
+    <meta name="robots" content="noindex, nofollow" />
+  )
+}
+
+<!-- Open Graph -->
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:type" content={Astro.props.ogType ?? 'website'} />
+<meta property="og:url" content={url} />
+<meta property="og:title" content={Astro.props.title} />
+<meta property="og:description" content={Astro.props.description} />
+<meta property="og:image" content={image} />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={Astro.props.title} />
+<meta name="twitter:description" content={Astro.props.description} />
+<meta name="twitter:image" content={image} />
+
+<!-- Language & region: primary English, future hreflang set added per translation -->
+<link rel="alternate" hreflang="x-default" href={url} />
+<link rel="alternate" hreflang="en" href={url} />
+
+<!-- Favicon set -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/brand/icon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/brand/icon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/brand/icon-192.png" />
+
+<!-- Business structured data -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE.name,
+    url: SITE.domain,
+    logo: `${SITE.domain}/brand/logo-square.svg`,
+    description: SITE.description,
+    email: CONTACT.email,
+    telephone: CONTACT.phoneInternational,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Akay Trade Office, Tila Street, Azadegan Street',
+      addressLocality: 'Urmia',
+      addressRegion: 'West Azerbaijan',
+      addressCountry: 'IR',
+    },
+    sameAs: [
+      'https://www.facebook.com/share/18aBjqpNMT/',
+      'https://www.instagram.com/iran.sourcing.hub',
+      'https://www.linkedin.com/in/vahid-gholipour-81a13996',
+    ],
+  })}
+/>
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.domain,
+    inLanguage: 'en',
+  })}
+/>

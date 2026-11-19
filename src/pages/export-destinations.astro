@@ -1,0 +1,185 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CTASection from '@/components/CTASection.astro';
+import RelatedResources from '@/components/RelatedResources.astro';
+
+const regions = [
+  {
+    name: 'Iraq',
+    note: 'A large, established market for Iranian fruit. Shared borders and road corridors from West Azerbaijan keep transit times short — often the decisive factor for fruit condition at arrival. Demand spans wholesale produce markets and retail distribution.',
+  },
+  {
+    name: 'United Arab Emirates',
+    note: 'A re-export hub and a quality-driven retail market in its own right. Gulf buyers value consistent grading and presentation fruit, with sea and road routing options depending on the program.',
+  },
+  {
+    name: 'Russia',
+    note: 'One of the region\u2019s major apple import markets. Volumes are substantial and competitive, which makes supplier reliability and written specifications especially valuable.',
+  },
+  {
+    name: 'Armenia & Azerbaijan',
+    note: 'Neighbors with established trade connections to Iran. Proximity supports efficient road freight and competitive landed costs for wholesale programs.',
+  },
+  {
+    name: 'Central Asia',
+    note: 'Growing economies with demand for quality fruit, served through established overland trade corridors connecting Iranian production to the region.',
+  },
+  {
+    name: 'Other markets',
+    note: 'Wherever trade is legally and commercially feasible, Iranian apples can be assessed as an origin. Feasibility is confirmed honestly per market — regulations, transit and season all play a part.',
+  },
+];
+---
+
+<BaseLayout
+  title="Iranian Apple Export Destinations — Regional Markets | SibExport"
+  description="Export destinations for Iranian apples: Iraq, UAE, Russia, Armenia, Azerbaijan and Central Asia — market considerations for importers, assessed honestly per order."
+  path="/export-destinations/"
+  ogImage="/images/destinations.png"
+>
+  <Breadcrumbs
+    items={[{ label: 'Home', href: '/' }, { label: 'Export Destinations' }]}
+  />
+  <PageHero
+    eyebrow="Destinations"
+    title="Export destinations and target markets"
+    description="Iran's apple production and geographic position connect it efficiently to markets across the Middle East, Caucasus, Russia and Central Asia. Here is how we think about each."
+  />
+
+  <article class="container-site py-14 lg:py-20">
+    <div class="prose-site mx-auto max-w-3xl">
+      <h2>Why Iran's position matters for apple trade</h2>
+      <p>
+        Fresh fruit is heavy, perishable and margin-sensitive — which makes
+        geography a commercial factor as real as price. Iran sits within
+        road-transport distance of several major apple-importing economies,
+        and its northwest production region around Urmia is particularly
+        well placed: close to border crossings into Iraq and Turkey, within
+        reach of Caucasus corridors, and connected onward to Russia and
+        Central Asia.
+      </p>
+      <p>
+        For buyers, shorter transit is not merely cheaper — it is fresher.
+        Apples that spend days rather than weeks in transit arrive firmer,
+        with more shelf life remaining for the retail chain that ultimately
+        sells them. That single fact shapes which markets Iranian apples
+        serve most competitively.
+      </p>
+
+      <h2>Markets and their commercial considerations</h2>
+
+<figure class="my-8">
+      <img
+        src="/images/banner-market.svg"
+        alt="Regional export markets for Iranian apples"
+        width="1200"
+        height="480"
+        loading="lazy"
+        class="w-full rounded-xl border border-border shadow-sm"
+      />
+      <figcaption class="mt-2 text-center text-xs text-muted-foreground">Regional export markets for Iranian apples</figcaption>
+    </figure>
+      <p>
+        The profiles below describe how we assess each potential destination.
+        They are commercial considerations, not promises of current routes —
+        active trade depends on seasonal, commercial and regulatory factors
+        confirmed per order.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-8 grid max-w-4xl gap-5 sm:grid-cols-2">
+      {
+        regions.map((region) => (
+          <div class="reveal rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+            <h3 class="text-lg font-semibold">{region.name}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {region.note}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="prose-site mx-auto mt-12 max-w-3xl">
+      <h2>What determines whether a destination works</h2>
+      <p>
+        Behind every successful fruit shipment are the same practical
+        questions. When a buyer approaches us with a new destination, we
+        work through them openly:
+      </p>
+      <ul>
+        <li>
+          <strong>Import regulations</strong> — the destination's plant
+          health requirements and the documentation they demand
+        </li>
+        <li>
+          <strong>Transit practicality</strong> — route, transit time and
+          cold-chain requirements versus the fruit's condition and shelf life
+        </li>
+        <li>
+          <strong>Seasonal fit</strong> — whether the Iranian crop calendar
+          matches the destination's demand window
+        </li>
+        <li>
+          <strong>Commercial terms</strong> — Incoterms, payment conditions
+          and volume that make a program work for both sides
+        </li>
+      </ul>
+      <p>
+        If a destination does not currently make commercial or regulatory
+        sense, we will tell you that directly. An honest "not yet" from the
+        quotation stage is worth more to a buyer than a confident yes that
+        collapses at the border.
+      </p>
+
+      <h2>A note on accuracy</h2>
+      <p>
+        We do not claim established export routes or existing customers in
+        any market. SibExport is positioned to serve the destinations above,
+        and each order — particularly a first order into a market — is
+        confirmed against current conditions. Buyers value that honesty in
+        quotation stage more than any map of arrows on a homepage.
+      </p>
+
+      <h2>Planning a shipment to your market</h2>
+      <p>
+        If your destination appears above — or you want us to assess one that
+        does not — the starting point is the same: send your specification
+        and destination through the
+        <a href="/request-a-quotation/">quotation form</a>. For the mechanics
+        of how an order proceeds from there, see the
+        <a href="/apple-export-process/">export process</a> page; for fruit
+        standards and packing, see
+        <a href="/apple-quality-specifications/">quality and specifications</a>
+        and <a href="/apple-packaging/">packaging</a>.
+      </p>
+      <p>
+        Buyers exploring the Iraqi market in particular may find the
+        independent resources below useful context.
+      </p>
+    </div>
+  </article>
+
+  <RelatedResources
+    title="Regional market resources"
+    links={[
+      {
+        label: 'Apple Export from Urmia to Turkey and Iraq',
+        href: 'https://www.urummarkaz.ir/export-apple-urmia-turkey-iraq',
+        description: 'Independent regional reference on Iranian apple trade toward Turkey and Iraq.',
+      },
+      {
+        label: 'Find Foreign Buyers in Iraq',
+        href: 'https://www.hubsourcing.ir/sourcing/find-foreign-buyer-iraq/',
+        description: 'Third-party buyer sourcing services for the Iraqi wholesale market.',
+      },
+    ]}
+  />
+
+  <CTASection
+    title="Is your market on the list?"
+    description="Even if your destination is not listed, contact us — we will assess feasibility for your shipment honestly and quickly."
+  />
+</BaseLayout>

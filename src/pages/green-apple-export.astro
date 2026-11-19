@@ -1,0 +1,156 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CTASection from '@/components/CTASection.astro';
+import { CONTACT } from '@/lib/site';
+---
+
+<BaseLayout
+  title="Green Apple Supplier — Bulk Iranian Green Apples | SibExport"
+  description="Green apple supplier from Iran. SibExport supplies fresh Iranian green apples in bulk to importers and wholesale buyers, graded and packed for export. Request a quotation."
+  path="/green-apple-export/"
+  ogImage="/images/green-apple.png"
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Iranian Apple Varieties', href: '/iranian-apple-varieties/' },
+      { label: 'Green Apple Export' },
+    ]}
+  />
+  <PageHero
+    eyebrow="Product"
+    title="Green apple supply from Iran"
+    description="Fresh, tangy green apples selected for firmness and shelf life — a sharp, distinctive category for your import portfolio."
+  />
+
+  <article class="container-site py-14 lg:py-20">
+    <div class="prose-site mx-auto max-w-3xl">
+      <h2>The tart category that completes a program</h2>
+      <p>
+        Green apples bring something red and golden fruit cannot: acidity.
+        Their tart, crisp profile has a loyal following in many markets, and
+        for importers they serve a useful commercial role — differentiating a
+        product range and appealing to customers who find sweeter apples
+        ordinary. In mixed wholesale programs, a reliable green category
+        alongside red and golden fruit signals a supplier who can serve the
+        whole market rather than part of it.
+      </p>
+      <p>
+        SibExport supplies green apples from Iranian orchards in export
+        volumes, graded and packed against a written specification. As with
+        every category we ship, the specification is agreed with you before
+        sourcing begins — variety, size count, grade and packing are all
+        confirmed in writing.
+      </p>
+
+      <h3>Characteristics buyers care about</h3>
+
+    <figure class="my-8">
+      <img
+        src="/images/green-apple.svg"
+        alt="Firm green apples selected for export"
+        width="1200"
+        height="630"
+        loading="lazy"
+        class="w-full rounded-xl border border-border shadow-sm"
+      />
+      <figcaption class="mt-2 text-center text-xs text-muted-foreground">Firm green apples selected for export</figcaption>
+    </figure>
+      <ul>
+        <li>
+          <strong>Acidity and flavor</strong> — the tart brightness that
+          defines the category and drives repeat purchase among its fans
+        </li>
+        <li>
+          <strong>Firmness</strong> — green apples are typically among the
+          firmest fruit in a program, which suits them to handling and
+          longer transit
+        </li>
+        <li>
+          <strong>Color</strong> — the bright, uniform green without
+          excessive yellowing that signals freshness in the category
+        </li>
+        <li>
+          <strong>Shelf behavior</strong> — firmer, more acidic fruit
+          generally holds eating quality longer, a practical advantage for
+          distributors
+        </li>
+      </ul>
+
+      <h3>Varieties and general market information</h3>
+      <p>
+        Internationally, the green category is dominated by Granny Smith and
+        similar tart varieties. Iran's orchards grow a range of green-type
+        apples suited to wholesale trade. A clear distinction matters here:
+        general information about green apple categories is widely known, but
+        <strong>what SibExport can actually supply in a given season is a
+        separate question</strong> — one we answer per order, in writing,
+        against your specification. We do not publish a fixed variety list
+        because availability genuinely changes with harvest and storage
+        cycles.
+      </p>
+
+      <h3>Size counts and grading</h3>
+      <p>
+        Green apples for export follow the same sizing logic as other
+        categories: count per carton defines fruit size, and the grade sets
+        tolerances for color, firmness and surface defects. Because the
+        category is often bought alongside red and golden fruit, buyers
+        frequently align counts across all three classes. Send us the count
+        and grade your market expects — or your current specification sheet —
+        and we will confirm what Iranian supply can match.
+      </p>
+
+      <h3>Packing, storage and transportation</h3>
+      <p>
+        Green apples' firmness makes them a robust shipping category, but
+        that is not a reason to relax packing standards. Fruit ships in
+        export-grade cartons with interior packaging matched to the journey's
+        length and conditions, and cold-chain handling from packing to
+        loading follows the same discipline as the rest of our program. For
+        regional road-freight destinations — Iraq, the Caucasus, Turkey, the
+        Gulf — short transit works strongly in favor of arrival condition.
+      </p>
+      <p>
+        Packing options and confirmation workflow are covered on the
+        <a href="/apple-packaging/">apple packaging</a> page; the inspection
+        points that protect quality are described under
+        <a href="/apple-quality-specifications/">quality and specifications</a>.
+      </p>
+
+      <h3>Who this supply suits</h3>
+      <p>
+        Bulk green apples from Iran suit importers completing a three-color
+        program, wholesalers serving markets where tart apples outsell sweet
+        ones, and food distributors looking for firm fruit that tolerates
+        demanding distribution chains. If green apples are a gap in your
+        current range, or your existing supply is inconsistent, request a
+        quotation with your specification and destination — we will respond
+        with a realistic offer.
+      </p>
+
+      <h3>Frequently asked questions about green apple supply</h3>
+      <p><strong>Can I buy Iranian green apples in bulk?</strong><br />
+      Yes. SibExport supplies the green category in export volumes alongside
+      red and golden apples. Volume minimums are confirmed per order.</p>
+      <p><strong>Which green varieties do you supply?</strong><br />
+      Variety availability changes with the season. Tell us the profile your
+      market expects — tartness, size, color — and we will confirm in writing
+      what the current crop can deliver.</p>
+      <p><strong>Do green apples ship as well as red?</strong><br />
+      Green apples are typically firm and travel well, particularly by road
+      to regional destinations. Packing and cold-chain handling still follow
+      full export standards.</p>
+      <p><strong>How do I start?</strong><br />
+      Send your specification and destination through the quotation form or
+      WhatsApp. The more detail you provide, the more precise the offer.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Ready to add Iranian green apples to your program?"
+    description={`Send your sizes, grades, volume and destination — via the quotation form or WhatsApp at ${CONTACT.whatsappInternational}.`}
+  />
+</BaseLayout>

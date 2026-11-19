@@ -1,0 +1,214 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CTASection from '@/components/CTASection.astro';
+
+const varieties = [
+  {
+    name: 'Red Apple Varieties',
+    description:
+      'Iranian red apples are known for their color, crunch and versatile sizing — a dependable category for wholesale programs.',
+    href: '/red-apple-export/',
+    color: 'bg-apple-500',
+  },
+  {
+    name: 'Golden Apple Varieties',
+    description:
+      'Golden apples offer a sweet, balanced flavor and attractive pale color favored across regional markets.',
+    href: '/golden-apple-export/',
+    color: 'bg-gold-400',
+  },
+  {
+    name: 'Green Apple Varieties',
+    description:
+      'Green apples bring tangy acidity and firm texture, well suited to buyers seeking a tart profile.',
+    href: '/green-apple-export/',
+    color: 'bg-forest-500',
+  },
+];
+---
+
+<BaseLayout
+  title="Iranian Apple Varieties — Red, Golden & Green Types | SibExport"
+  description="A buyer's guide to Iranian apple varieties: red, golden and green apple classes from Iran's orchards, with commercial notes for importers and wholesale buyers."
+  path="/iranian-apple-varieties/"
+  ogImage="/images/varieties.png"
+>
+  <Breadcrumbs
+    items={[{ label: 'Home', href: '/' }, { label: 'Iranian Apple Varieties' }]}
+  />
+  <PageHero
+    eyebrow="Our Products"
+    title="Iranian apple varieties"
+    description="Iran is one of the world's major apple producers. Here is what international buyers should know about the varieties and categories its orchards supply."
+  />
+
+  <article class="container-site py-14 lg:py-20">
+    <div class="prose-site mx-auto max-w-3xl">
+      <h2>Iran's apple landscape, briefly</h2>
+      <p>
+        Iran ranks among the largest apple-producing countries in the world,
+        with an annual crop measured in millions of tonnes. The heart of that
+        production lies in the northwest: the provinces of West and East
+        Azerbaijan, where elevations, cold winters and long autumn days
+        produce apples with dense flesh, developed sugars and the firmness
+        export buyers require. Urmia, in West Azerbaijan, sits at the center
+        of this region and is widely regarded as one of Iran's most important
+        apple cities.
+      </p>
+      <p>
+        For an international buyer, this matters for one practical reason:
+        <strong>origin concentration</strong>. Because so much of Iran's apple
+        crop grows within a compact, well-connected region, a supplier based
+        there can genuinely follow fruit from orchard to loading — an
+        advantage fragmented growing regions cannot always offer.
+      </p>
+
+      <h2>The three commercial color classes</h2>
+      <p>
+        International apple trade is organized less around botanical variety
+        names and more around commercial categories. In wholesale practice,
+        Iranian apples divide into three classes, each with its own buyer
+        profile and handling requirements.
+      </p>
+      <p>
+        The classification below describes the commercial categories
+        SibExport works with. Within each, the exact varieties we can supply
+        in a given season are confirmed per order — availability genuinely
+        changes with harvest and storage cycles, and we prefer written
+        confirmation over brochure promises.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-10 grid max-w-3xl gap-6 md:grid-cols-3">
+      {
+        varieties.map((v) => (
+          <a
+            href={v.href}
+            class="group rounded-xl border border-border bg-card p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
+            <span class={`block h-2.5 w-2.5 rounded-full ${v.color}`} aria-hidden="true" />
+            <h3 class="mt-4 text-xl font-semibold">{v.name}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {v.description}
+            </p>
+            <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700">
+              View details
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="prose-site mx-auto mt-12 max-w-3xl">
+      <h2>Red apples: the volume leader</h2>
+      <p>
+        Red apples are Iran's signature export category. Grown across the
+        northwest's orchards, Iranian red apples combine strong color
+        development with firm flesh and a balanced sweet-tart profile. They
+        are versatile in trade: the same category serves retail chain
+        programs, wholesale market stalls and repackers. Buyers typically
+        specify them by count per carton and color grade, with mid-size,
+        well-colored fruit the most demanded profile.
+      </p>
+      <p>
+        Commercial detail on this category lives on the
+        <a href="/red-apple-export/">red apple export</a> page.
+      </p>
+
+      <h2>Golden apples: the sweet favorite</h2>
+      <p>
+        The golden category — commercially associated with Golden Delicious
+        and similar types — offers pale gold skin, crisp white flesh and a
+        distinctly sweet, low-acid eating experience. Golden apples are a
+        familiar staple across regional markets and are commonly bought
+        alongside red fruit in mixed programs. Their thinner skin demands
+        more careful handling than red categories, which makes harvest care
+        and interior packing the decisive quality factors.
+      </p>
+      <p>
+        Commercial detail on this category lives on the
+        <a href="/golden-apple-export/">golden apple export</a> page.
+      </p>
+
+      <h2>Green apples: the tart complement</h2>
+      <p>
+        Green apples supply what the other categories cannot: acidity. Firm,
+        tart and visually distinctive, they round out a three-color program
+        and hold a loyal customer base in many markets. Their firmness makes
+        them robust travelers, well suited to demanding distribution chains
+        and longer transit.
+      </p>
+      <p>
+        Commercial detail on this category lives on the
+        <a href="/green-apple-export/">green apple supply</a> page.
+      </p>
+
+      <h2>Seasonality: when Iranian apples are available</h2>
+
+<figure class="my-8">
+      <img
+        src="/images/banner-season.svg"
+        alt="Iranian apple harvest and storage seasons"
+        width="1200"
+        height="480"
+        loading="lazy"
+        class="w-full rounded-xl border border-border shadow-sm"
+      />
+      <figcaption class="mt-2 text-center text-xs text-muted-foreground">Iranian apple harvest and storage seasons</figcaption>
+    </figure>
+      <p>
+        Iran's apple harvest typically begins in late summer and runs through
+        autumn, with the exact window shifting by region, elevation and
+        variety. Once harvested, fruit destined for later shipments moves
+        into cold storage, which extends commercial availability for much of
+        the year. In practice, this means buyers can usually plan programs
+        across several seasons of demand — fresh-harvest fruit in autumn,
+        storage fruit through winter and spring.
+      </p>
+      <p>
+        What we will not do is quote fixed availability months ahead of
+        reality. Seasonal planning works best as a conversation: tell us your
+        market's demand pattern, and we will map it honestly against the
+        Iranian crop calendar.
+      </p>
+
+      <h2>General information versus confirmed supply</h2>
+      <p>
+        One distinction recurs throughout this page because it protects
+        buyers: <strong>the general characteristics of Iranian apple
+        varieties are widely known; the specific varieties, sizes and grades
+        SibExport can confirm for your order are a commercial fact that
+        depends on the season.</strong> We keep the two separate on purpose.
+        Everything on this page is honest orientation; everything in your
+        quotation is a written commitment. That is how a repeatable supply
+        relationship is built.
+      </p>
+
+      <h2>Choosing the right category for your market</h2>
+      <p>
+        Buyers new to Iranian supply often ask which category to start with.
+        The honest answer depends on your customers: red apples are the
+        broadest, safest volume category; golden apples add a sweet profile
+        with strong regional recognition; green apples differentiate a range
+        and serve tart-apple demand. Many buyers begin with a single mixed
+        container to test market response before committing to a seasonal
+        program.
+      </p>
+      <p>
+        If you are planning a first order, our
+        <a href="/apple-export-process/">export process</a> page shows exactly
+        how an inquiry becomes a delivered shipment — and the
+        <a href="/request-a-quotation/">quotation form</a> is the fastest way
+        to start.
+      </p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Not sure which variety fits your market?"
+    description="Tell us your market and customers — we will recommend the category and configuration that fits, honestly."
+  />
+</BaseLayout>

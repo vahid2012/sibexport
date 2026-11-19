@@ -1,0 +1,213 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CTASection from '@/components/CTASection.astro';
+import { CONTACT } from '@/lib/site';
+
+const specs = [
+  {
+    title: 'Size grading',
+    points: [
+      'Fruit is sized mechanically or by trained graders to a uniform count per carton',
+      'Count specifications are agreed per order — the buyer\u2019s market standard governs',
+      'Size consistency within a carton is checked at grading and again at loading',
+    ],
+  },
+  {
+    title: 'Appearance and color',
+    points: [
+      'Color requirements are written into the specification — depth of ground color, blush coverage and absence of green, per category',
+      'Visual uniformity across the carton is part of the grade, not an afterthought',
+      'Photographic records of representative fruit can be shared with buyers during order preparation',
+    ],
+  },
+  {
+    title: 'Firmness and maturity',
+    points: [
+      'Firmness is the best single predictor of how fruit survives transit and holds texture on arrival',
+      'Harvest timing targets the maturity window that balances eating quality against storage behavior',
+      'We do not publish fixed firmness numbers — honest values depend on variety and storage history, and are confirmed per lot',
+    ],
+  },
+  {
+    title: 'Defects and tolerances',
+    points: [
+      'Grades define allowable tolerances for blemishes, russeting, shape irregularity and handling marks',
+      'Tolerance levels are agreed in writing before packing begins',
+      'Nothing is left to interpretation: the specification sheet defines what is and is not acceptable',
+    ],
+  },
+  {
+    title: 'Sorting and inspection points',
+    points: [
+      'Sorting at the packing facility removes fruit that cannot meet the agreed grade',
+      'Quality is checked at three stages: at sourcing, after packing, and at loading',
+      'Buyers are welcome to arrange third-party inspection at agreed stages',
+    ],
+  },
+  {
+    title: 'Buyer specifications and consistency',
+    points: [
+      'Every order is packed against a written specification sheet: variety, count, grade, packing',
+      'Repeat orders reference the same specification so programs stay consistent across the season',
+      'Any proposed change to a confirmed specification is raised with the buyer before packing, never after',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Iranian Apple Quality & Specifications — Grading for Export | SibExport"
+  description="Apple quality and export specifications from SibExport: size grading, color, firmness, defects, sorting and buyer specifications for Iranian export apples."
+  path="/apple-quality-specifications/"
+  ogImage="/images/quality.png"
+>
+  <Breadcrumbs
+    items={[{ label: 'Home', href: '/' }, { label: 'Apple Quality & Specifications' }]}
+  />
+  <PageHero
+    eyebrow="Quality"
+    title="Apple quality and specifications"
+    description="Consistent grading and disciplined quality control are the foundation of every SibExport shipment. Here is exactly how quality is defined, checked and delivered."
+  />
+
+  <article class="container-site py-14 lg:py-20">
+    <div class="prose-site mx-auto max-w-3xl">
+      <h2>Why a written specification comes first</h2>
+      <p>
+        The most common failure in fresh fruit trade is not bad fruit — it is
+        mismatched expectations. A buyer expects the color they saw in a
+        sample photo; the supplier ships to a different standard. Fruit that
+        would have satisfied both sides ends up rejected because nobody wrote
+        the requirements down.
+      </p>
+      <p>
+        SibExport's answer is procedural: <strong>every order is packed
+        against a written specification sheet agreed before sourcing
+        begins</strong>. The sheet covers variety, size count, grade and
+        packing configuration. It becomes the reference for grading, the
+        checklist at loading, and the definition of "correct" for both sides.
+        This single habit prevents most quality disputes before they can
+        start.
+      </p>
+      <p>
+        Buyers who work this way — and most experienced importers insist on
+        it — find that Iranian supply can hold its own against any origin,
+        because the specification, not memory or goodwill, defines the deal.
+      </p>
+
+      <h2>What the specification covers</h2>
+      <p>
+        A SibExport specification sheet is a plain-language document a
+        purchasing manager can verify against the fruit in front of them. Its
+        main sections are outlined below — click any section to expand the
+        detail.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-8 max-w-3xl space-y-3">
+      {
+        specs.map((spec, i) => (
+          <details
+            class="reveal group rounded-xl border border-border bg-card shadow-sm open:shadow-md"
+            style={`transition-delay:${Math.min(i, 5) * 0.05}s`}
+          >
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl p-5 text-left font-semibold text-foreground transition-colors duration-200 hover:text-forest-700 [&::-webkit-details-marker]:hidden">
+              {spec.title}
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+            </summary>
+            <ul class="px-5 pb-5">
+              {spec.points.map((point) => (
+                <li class="flex items-start gap-3 py-1.5 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-forest-600" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </details>
+        ))
+      }
+    </div>
+
+    <div class="prose-site mx-auto mt-12 max-w-3xl">
+      <h2>Quality inspection in practice</h2>
+
+<figure class="my-8">
+      <img
+        src="/images/banner-inspect.svg"
+        alt="Apple quality inspection points at sourcing, packing and loading"
+        width="1200"
+        height="480"
+        loading="lazy"
+        class="w-full rounded-xl border border-border shadow-sm"
+      />
+      <figcaption class="mt-2 text-center text-xs text-muted-foreground">Apple quality inspection points at sourcing, packing and loading</figcaption>
+    </figure>
+      <p>
+        Specifications only matter if someone checks against them. Our
+        inspection discipline follows three fixed points in every order:
+      </p>
+      <ol>
+        <li>
+          <strong>At sourcing</strong> — fruit arriving from orchards is
+          checked against the specification before it enters the packing
+          line. Problems caught here are cheapest to fix.
+        </li>
+        <li>
+          <strong>After packing</strong> — packed cartons are sampled for
+          count accuracy, color conformity and packing integrity.
+        </li>
+        <li>
+          <strong>At loading</strong> — the loaded cargo is verified against
+          the order: carton condition, container condition, and
+          documentation match.
+        </li>
+      </ol>
+      <p>
+        Buyers may arrange third-party inspection at any of these stages. We
+        treat an independent inspector as an ally of the specification, not a
+        threat to it.
+      </p>
+
+      <h2>Pricing factors, honestly explained</h2>
+      <p>
+        Buyers researching <em>Iranian apple export prices and
+        specifications</em> will find that published price lists are rare —
+        and for good reason. Wholesale apple pricing depends on several
+        interacting factors that change through the season:
+      </p>
+      <ul>
+        <li><strong>Category and variety</strong> — red, golden and green categories price differently, and so do varieties within them</li>
+        <li><strong>Size count</strong> — larger presentation fruit carries a premium over higher-count sizes</li>
+        <li><strong>Grade</strong> — tighter tolerances cost more to produce and price accordingly</li>
+        <li><strong>Season position</strong> — fresh-harvest fruit, early-storage fruit and late-season fruit are different market situations</li>
+        <li><strong>Volume</strong> — program volumes and single-truck orders are different commercial conversations</li>
+        <li><strong>Packing</strong> — carton specification, interior packaging and retail-ready formats all affect the final figure</li>
+        <li><strong>Delivery terms</strong> — Incoterms determine which costs sit with the supplier and which with the buyer</li>
+      </ul>
+      <p>
+        This is why every SibExport offer is prepared per inquiry: a number
+        quoted without these factors is a number that will change. Send us
+        your specification and destination, and the price you receive will
+        mean something.
+      </p>
+
+      <h2>What we do not claim</h2>
+      <p>
+        We do not claim specific certification status, publish fixed shelf
+        lives, or quote quality guarantees detached from a written
+        specification. Where your destination market requires particular
+        certificates or compliance documentation, tell us — those
+        requirements are handled through the documentation coordination
+        described on the <a href="/apple-export-process/">export process</a>
+        page, and we confirm plainly what we can and cannot provide.
+      </p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Need a specification sheet for your market?"
+    description={`Tell us your requirements and we will prepare detailed specifications — request a quotation or message WhatsApp ${CONTACT.whatsappInternational}.`}
+  />
+</BaseLayout>

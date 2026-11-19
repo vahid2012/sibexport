@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 220 6% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 6% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 6% 16%;
+    --primary: 152 33% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 20% 94%;
+    --secondary-foreground: 152 33% 22%;
+    --muted: 40 17% 93%;
+    --muted-foreground: 220 5% 42%;
+    --accent: 40 30% 92%;
+    --accent-foreground: 152 33% 20%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 35 15% 87%;
+    --input: 35 15% 80%;
+    --ring: 152 33% 25%;
+    --chart-1: 152 33% 25%;
+    --chart-2: 0 72% 51%;
+    --chart-3: 40 68% 55%;
+    --chart-4: 199 89% 48%;
+    --chart-5: 280 65% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 160 15% 8%;
+    --foreground: 40 20% 96%;
+    --card: 160 12% 11%;
+    --card-foreground: 40 20% 96%;
+    --popover: 160 12% 11%;
+    --popover-foreground: 40 20% 96%;
+    --primary: 145 35% 55%;
+    --primary-foreground: 160 30% 8%;
+    --secondary: 160 10% 16%;
+    --secondary-foreground: 40 20% 96%;
+    --muted: 160 10% 16%;
+    --muted-foreground: 40 8% 65%;
+    --accent: 160 10% 18%;
+    --accent-foreground: 40 20% 96%;
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 160 10% 20%;
+    --input: 160 10% 22%;
+    --ring: 145 35% 55%;
+    --chart-1: 145 35% 55%;
+    --chart-2: 0 75% 60%;
+    --chart-3: 40 70% 55%;
+    --chart-4: 199 89% 55%;
+    --chart-5: 280 65% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-all duration-200 hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98];
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-forest-600;
+  }
+
+  /* Long-form article/prose content */
+  .prose-site {
+    @apply text-base leading-relaxed text-muted-foreground;
+  }
+
+  .prose-site h2 {
+    @apply mt-12 text-2xl font-bold text-foreground sm:text-3xl;
+  }
+
+  .prose-site h3 {
+    @apply mt-8 text-xl font-semibold text-foreground;
+  }
+
+  .prose-site h4 {
+    @apply mt-6 text-lg font-semibold text-foreground;
+  }
+
+  .prose-site p {
+    @apply mt-4;
+  }
+
+  .prose-site ul,
+  .prose-site ol {
+    @apply mt-4 space-y-2 pl-6;
+  }
+
+  .prose-site ul {
+    @apply list-disc;
+  }
+
+  .prose-site ol {
+    @apply list-decimal;
+  }
+
+  .prose-site strong {
+    @apply font-semibold text-foreground;
+  }
+
+  .prose-site a {
+    @apply font-medium text-forest-700 underline underline-offset-2 transition-colors hover:text-forest-600;
+  }
+
+  .prose-site blockquote {
+    @apply mt-6 border-l-4 border-forest-200 bg-forest-50/60 px-5 py-4 text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Scroll-reveal: sections start hidden only when JS can enhance them */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out;
+  }
+
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    @apply scroll-auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

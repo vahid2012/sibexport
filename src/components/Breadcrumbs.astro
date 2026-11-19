@@ -1,0 +1,65 @@
+---
+import type { Breadcrumb } from '@/lib/site';
+
+interface Props {
+  items: Breadcrumb[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="border-b border-border/70 bg-secondary/50">
+  <ol
+    class="container-site flex flex-wrap items-center gap-1.5 py-3 text-xs text-muted-foreground sm:text-sm"
+  >
+    {
+      items.map((item, index) => (
+        <li class="flex items-center gap-1.5">
+          {index > 0 && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-muted-foreground/70"
+              aria-hidden="true"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          )}
+          {item.href ? (
+            <a
+              href={item.href}
+              class="transition-colors duration-200 hover:text-forest-700"
+            >
+              {item.label}
+            </a>
+          ) : (
+            <span aria-current="page" class="font-medium text-foreground">
+              {item.label}
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      ...(item.href ? { item: `https://sibexport.ir${item.href}` } : {}),
+    })),
+  })}
+/>
